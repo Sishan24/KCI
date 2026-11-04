@@ -1,0 +1,239 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Khan Carpets International (KCI) design system
+ * Indian heritage x international luxury: deep forest green, ivory,
+ * antique gold, terracotta. Cormorant Garamond display + Karla body.
+ */
+
+@theme inline {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-terracotta: var(--terracotta);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --background: oklch(0.972 0.014 88);
+  --foreground: oklch(0.24 0.03 150);
+
+  --card: oklch(0.988 0.008 88);
+  --card-foreground: oklch(0.24 0.03 150);
+  --popover: oklch(0.988 0.008 88);
+  --popover-foreground: oklch(0.24 0.03 150);
+
+  /* deep forest green */
+  --primary: oklch(0.32 0.055 156);
+  --primary-foreground: oklch(0.972 0.014 88);
+
+  --secondary: oklch(0.93 0.02 88);
+  --secondary-foreground: oklch(0.3 0.04 150);
+
+  --muted: oklch(0.94 0.015 88);
+  --muted-foreground: oklch(0.48 0.02 120);
+
+  /* antique gold */
+  --accent: oklch(0.74 0.11 78);
+  --accent-foreground: oklch(0.24 0.03 150);
+
+  --gold: oklch(0.74 0.11 78);
+  --gold-foreground: oklch(0.24 0.03 150);
+  --terracotta: oklch(0.56 0.13 40);
+  --ink: oklch(0.22 0.03 152);
+  --ink-foreground: oklch(0.972 0.014 88);
+
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0.01 88);
+
+  --border: oklch(0.88 0.02 88);
+  --input: oklch(0.88 0.02 88);
+  --ring: oklch(0.74 0.11 78);
+
+  --chart-1: oklch(0.32 0.055 156);
+  --chart-2: oklch(0.74 0.11 78);
+  --chart-3: oklch(0.56 0.13 40);
+  --chart-4: oklch(0.45 0.1 250);
+  --chart-5: oklch(0.6 0.14 20);
+
+  --sidebar: oklch(0.972 0.014 88);
+  --sidebar-foreground: oklch(0.24 0.03 150);
+  --sidebar-primary: oklch(0.32 0.055 156);
+  --sidebar-primary-foreground: oklch(0.972 0.014 88);
+  --sidebar-accent: oklch(0.93 0.02 88);
+  --sidebar-accent-foreground: oklch(0.3 0.04 150);
+  --sidebar-border: oklch(0.88 0.02 88);
+  --sidebar-ring: oklch(0.74 0.11 78);
+
+  --gradient-emerald: linear-gradient(
+    160deg,
+    oklch(0.28 0.05 156) 0%,
+    oklch(0.34 0.06 160) 55%,
+    oklch(0.26 0.045 150) 100%
+  );
+  --gradient-gold: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.74 0.11 78 / 0.9),
+    transparent
+  );
+  --shadow-luxe: 0 30px 60px -25px oklch(0.24 0.03 150 / 0.45);
+  --shadow-soft: 0 12px 30px -18px oklch(0.24 0.03 150 / 0.4);
+}
+
+.dark {
+  --background: oklch(0.19 0.025 152);
+  --foreground: oklch(0.95 0.015 88);
+  --card: oklch(0.23 0.03 152);
+  --card-foreground: oklch(0.95 0.015 88);
+  --popover: oklch(0.23 0.03 152);
+  --popover-foreground: oklch(0.95 0.015 88);
+  --primary: oklch(0.8 0.09 80);
+  --primary-foreground: oklch(0.2 0.03 152);
+  --secondary: oklch(0.27 0.03 152);
+  --secondary-foreground: oklch(0.95 0.015 88);
+  --muted: oklch(0.27 0.03 152);
+  --muted-foreground: oklch(0.72 0.02 90);
+  --accent: oklch(0.74 0.11 78);
+  --accent-foreground: oklch(0.2 0.03 152);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.74 0.11 78);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility bg-gradient-emerald {
+  background-image: var(--gradient-emerald);
+}
+
+@utility shadow-luxe {
+  box-shadow: var(--shadow-luxe);
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility rule-gold {
+  height: 1px;
+  background-image: var(--gradient-gold);
+}
+
+@utility tracking-luxe {
+  letter-spacing: 0.28em;
+}
+
+/* Woven paper texture used behind editorial sections */
+@utility texture-weave {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      oklch(0.32 0.055 156 / 0.035) 0px,
+      oklch(0.32 0.055 156 / 0.035) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      oklch(0.56 0.13 40 / 0.03) 0px,
+      oklch(0.56 0.13 40 / 0.03) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+}
+
+@keyframes kci-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: kci-marquee 32s linear infinite;
+}
+
+@keyframes kci-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-rise {
+  animation: kci-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
